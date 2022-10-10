@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no"/>
-  <title>Главная</title>
+  <title>Home</title>
 
 
   <link rel="preload" href="./fonts/GothamPro/GothamPro.woff" as="font" type="font/woff" crossorigin="">
@@ -20,22 +20,81 @@
   <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
-<noscript>
-  <div class="noscript">
-  </div>
-</noscript>
-<!--if lte IE 8
-p.off-js
-  | Ваш браузер устарел, пожалуйста
-  b обновите
-  |  его.
--->
+
 
     <div class="wrapper">
-        
+        <header class="header">
+    <div class="container">
+        <nav class="row">
+            
+            <span class="logo">
+                <img src="./images/logo.svg" alt="">
+            </span>
+            
+            <div class="header__right">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#">Valutaomregner</a>
+                        
+    <svg class="icon icon__stroke js-btn-mobile" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-down"></use>
+    </svg>
+
+                        <ul class="menu__level-2" style="display: none;">
+                            <li class="menu__item"><a href="#">SEK til DKK</a></li>
+                            <li class="menu__item"><a href="#">NOK til DKK</a></li>
+                            <li class="menu__item"><a href="#">SEUR til DKK</a></li>
+                            <li class="menu__item"><a href="#">USD til DKK</a></li>
+                            <li class="menu__item"><a href="#">GBP til DKK</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a href="#">Bitcoin kurs</a></li>
+                    <li class="menu__item"><a href="#">Blog</a></li>
+                    <li class="menu__item"><a href="#">App</a></li>
+                </ul>
+                <button class="header__burger">
+                    
+    <svg class="icon " width="24" height="24">
+        <use href="./images/icon/sprite.svg#burger"></use>
+    </svg>
+
+                </button>
+                <div class="header__modal">
+                    <button class="header__modal-close">
+                        
+    <svg class="icon icon__stroke" width="33" height="33">
+        <use href="./images/icon/sprite.svg#close"></use>
+    </svg>
+
+                    </button>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#">Valutaomregner</a>
+                            
+    <svg class="icon icon__stroke js-btn-mobile" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-down"></use>
+    </svg>
+
+                            <ul class="menu__level-2">
+                                <li class="menu__item"><a href="#">SEK til DKK</a></li>
+                                <li class="menu__item"><a href="#">NOK til DKK</a></li>
+                                <li class="menu__item"><a href="#">SEUR til DKK</a></li>
+                                <li class="menu__item"><a href="#">USD til DKK</a></li>
+                                <li class="menu__item"><a href="#">GBP til DKK</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item menu__active"><a href="#">Bitcoin kurs</a></li>
+                        <li class="menu__item"><a href="#">Blog</a></li>
+                        <li class="menu__item"><a href="#">App</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div> 
+</header>
         <main class="main">
             <div class="container">
-                Start
             </div>
         </main>
         

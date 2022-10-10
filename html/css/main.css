@@ -245,6 +245,12 @@ textarea {
   /* 2 */
 }
 
+button {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  padding: 0px;
+}
+
 .btn--full-reset {
   padding: 0;
   border: 0;
@@ -373,7 +379,7 @@ body {
   font-family: 'Muller';
   font-size: 18px;
   line-height: 1.44;
-  color: #1F2345;
+  color: rgba(31, 35, 69, 0.85);
 }
 
 .container {
@@ -383,75 +389,40 @@ body {
   margin: auto;
 }
 
-.content img {
-  display: block;
-  margin: 0 auto 46px;
-}
-
-.content h1 {
-  margin-bottom: 20px;
-}
-
-.content h2 {
-  margin-bottom: 16px;
-}
-
-.content h4, .content h3 {
-  margin-bottom: 17px;
-}
-
-.content h6, .content h5 {
-  margin-bottom: 14px;
-}
-
-.content ol,
-.content ul {
-  margin-bottom: 32px;
-}
-
-.content li {
-  margin-bottom: 16px;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.content ul li {
+.content a {
+  color: #071D72;
   position: relative;
-  padding-left: 18px;
+  overflow: hidden;
 }
 
-.content ul li:before {
-  content: '';
+.content a:before {
   position: absolute;
-  top: 6px;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  bottom: 0px;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
-.content ol {
-  counter-reset: myCounter;
-}
-
-.content ol li {
-  position: relative;
-  padding-left: 20px;
-}
-
-.content ol li:before {
-  counter-increment: myCounter;
-  content: counter(myCounter) ". ";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-blockquote {
-  border-left: 8px solid #121314;
-  background-color: #F3F4FF;
-  padding: 16px 24px 16px 22px;
-  margin: 0 0 24px;
+@media (any-hover: hover) {
+  .content a {
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+  }
+  .content a:hover {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 *:focus, *:focus-visible {
@@ -486,13 +457,12 @@ h2, .h2-title {
 
 @media only screen and (min-width: 1200px) {
   h2, .h2-title {
-    font-size: 38px;
-    line-height: 1.37;
+    font-size: 48px;
+    line-height: 1.08;
   }
 }
 
 h3, .h3-title {
-  font-family: 'Muller';
   font-weight: 700;
   color: #071D72;
   font-size: 24px;
@@ -507,74 +477,17 @@ h3, .h3-title {
 }
 
 h4, .h4-title {
-  font-size: 24px;
-  font-size: calc(20px + (24 - 20) * ((100vw - 480px) / (1920 - 480)));
-  line-height: 26px;
-}
-
-@media (max-width: 480px) {
-  h4, .h4-title {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1920px) {
-  h4, .h4-title {
-    font-size: 24px;
-  }
+  font-weight: 700;
+  color: #071D72;
+  font-size: 18px;
+  line-height: 1.44;
 }
 
 @media only screen and (min-width: 1200px) {
   h4, .h4-title {
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 1.44;
   }
-}
-
-h5, .h5-title {
-  font-size: 20px;
-  font-size: calc(16px + (20 - 16) * ((100vw - 480px) / (1920 - 480)));
-  line-height: 22px;
-}
-
-@media (max-width: 480px) {
-  h5, .h5-title {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1920px) {
-  h5, .h5-title {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  h5, .h5-title {
-    line-height: 24px;
-  }
-}
-
-h6, .h6-title {
-  font-size: 16px;
-  font-size: calc(14px + (16 - 14) * ((100vw - 480px) / (1920 - 480)));
-  line-height: 20px;
-}
-
-@media (max-width: 480px) {
-  h6, .h6-title {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1920px) {
-  h6, .h6-title {
-    font-size: 16px;
-  }
-}
-
-.subtitle-large__mod {
-  font-size: 16px;
-  line-height: 1.3;
 }
 
 b, .bold {
@@ -630,36 +543,206 @@ b, .bold {
 }
 
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  color: currentColor;
-  line-height: 1em;
+  fill: currentColor;
+  stroke: currentColor;
 }
 
-@font-face {
-  font-family: "Icons";
-  src: url("../fonts/Icons.eot");
-  src: url("../fonts/Icons.eot?#iefix") format("eot"), url("../fonts/Icons.woff") format("woff"), url("../fonts/Icons.ttf") format("truetype"), url("../fonts/Icons.svg#Icons") format("svg");
+.icon__stroke {
+  fill: rgba(255, 255, 255, 0);
 }
 
-.icon-bookmark:before,
-.icon-heart:before {
-  font-family: "Icons";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-transform: none;
+.header {
+  padding: 20px 0px;
 }
 
-.icon-bookmark:before {
-  content: '\E001';
+.header .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+.header .logo img {
+  width: 147px;
+}
 
-.icon-heart:before {
-  content: '\E002';
+@media only screen and (min-width: 1200px) {
+  .header .logo img {
+    width: 307px;
+  }
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__modal {
+  padding-top: 64px;
+  max-width: 276px;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.header__modal.is-open {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.header__modal .menu {
+  display: block;
+}
+
+.header__modal-close {
+  position: absolute;
+  right: 16px;
+  top: 23px;
+  width: 33px;
+  height: 33px;
+}
+
+.header .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header__burger {
+  line-height: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__burger {
+    display: none;
+  }
+}
+
+.menu {
+  -webkit-box-shadow: 0px 5px 15px 1px silver;
+          box-shadow: 0px 5px 15px 1px silver;
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  @supports ((-moz-column-gap: 38px) or (column-gap: 38px)) {
+    .menu {
+      -webkit-column-gap: 38px;
+         -moz-column-gap: 38px;
+              column-gap: 38px;
+    }
+  }
+  @supports not ((-moz-column-gap: 38px) or (column-gap: 38px)) {
+    .menu {
+      margin-right: calc( 0px - (38px / 2));
+      margin-left: calc( 0px - (38px / 2));
+    }
+    .menu > * {
+      margin-right: calc(38px / 2);
+      margin-left: calc(38px / 2);
+    }
+  }
+}
+
+.menu__item {
+  -webkit-box-shadow: 0px -5px 10px -10px silver;
+          box-shadow: 0px -5px 10px -10px silver;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__item .icon {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1099px) {
+  .menu__item .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu__item {
+    padding: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.menu__item a {
+  padding: 9px 0px 9px 22px;
+  font-size: 14px;
+  line-height: 1.86;
+  color: #071D72;
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu__item a {
+    font-size: 22px;
+    line-height: 1;
+    padding: 10px 0px;
+  }
+}
+
+.menu__active {
+  background-color: #071D72;
+}
+
+.menu__active a {
+  color: #fff;
+}
+
+.menu__level-2 {
+  -webkit-box-shadow: inset 0px 3px 10px -5px silver;
+          box-shadow: inset 0px 3px 10px -5px silver;
+  margin-left: -22px;
+  padding: 0px 22px;
+  min-width: calc( 100% + 22px * 2);
+  padding: 9px 0px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu__level-2 {
+    margin-left: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.menu__level-2 .menu__item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu .icon {
+  fill: rgba(255, 255, 255, 0);
 }
