@@ -35,12 +35,14 @@
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#">Valutaomregner</a>
-                        
-    <svg class="icon icon__stroke js-btn-mobile" width="24" height="24">
+                        <div class="menu__arrow js-mobile-menu-btn">
+                            
+    <svg class="icon icon__stroke" width="24" height="24">
         <use href="./images/icon/sprite.svg#arrow-down"></use>
     </svg>
 
-                        <ul class="menu__level-2" style="display: none;">
+                        </div>
+                        <ul class="menu__level-2 js-mobile-menu">
                             <li class="menu__item"><a href="#">SEK til DKK</a></li>
                             <li class="menu__item"><a href="#">NOK til DKK</a></li>
                             <li class="menu__item"><a href="#">SEUR til DKK</a></li>
@@ -48,19 +50,19 @@
                             <li class="menu__item"><a href="#">GBP til DKK</a></li>
                         </ul>
                     </li>
-                    <li class="menu__item"><a href="#">Bitcoin kurs</a></li>
+                    <li class="menu__item menu__active"><a href="#">Bitcoin kurs</a></li>
                     <li class="menu__item"><a href="#">Blog</a></li>
                     <li class="menu__item"><a href="#">App</a></li>
                 </ul>
-                <button class="header__burger">
+                <button class="header__burger js-burger-btn">
                     
     <svg class="icon " width="24" height="24">
         <use href="./images/icon/sprite.svg#burger"></use>
     </svg>
 
                 </button>
-                <div class="header__modal">
-                    <button class="header__modal-close">
+                <div class="header__modal js-burger-modal">
+                    <button class="header__modal-close js-burger-close">
                         
     <svg class="icon icon__stroke" width="33" height="33">
         <use href="./images/icon/sprite.svg#close"></use>
@@ -70,12 +72,14 @@
                     <ul class="menu">
                         <li class="menu__item">
                             <a href="#">Valutaomregner</a>
-                            
-    <svg class="icon icon__stroke js-btn-mobile" width="24" height="24">
+                            <div class="menu__arrow js-mobile-menu-btn">
+                                
+    <svg class="icon icon__stroke" width="24" height="24">
         <use href="./images/icon/sprite.svg#arrow-down"></use>
     </svg>
 
-                            <ul class="menu__level-2">
+                            </div>
+                            <ul class="menu__level-2 js-mobile-menu">
                                 <li class="menu__item"><a href="#">SEK til DKK</a></li>
                                 <li class="menu__item"><a href="#">NOK til DKK</a></li>
                                 <li class="menu__item"><a href="#">SEUR til DKK</a></li>
@@ -97,7 +101,10 @@
             <div class="container">
             </div>
         </main>
-        
+        <footer class="">
+
+</footer>
+<div class="overlay js-overlay"></div>
     </div>
 
 
