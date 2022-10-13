@@ -513,58 +513,54 @@ b, .bold {
   pointer-events: auto;
 }
 
-.app-cart {
+.section {
+  padding: 50px 0px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .section {
+    padding: 60px 0px;
+  }
+}
+
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-shadow: -3px 6px 19px rgba(0, 0, 0, 0.12);
           box-shadow: -3px 6px 19px rgba(0, 0, 0, 0.12);
-  background-color: #fff;
-  display: inline-block;
+  border-collapse: collapse;
 }
 
-@media (any-hover: hover) {
-  .app-cart {
-    -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-timing-function: easy;
-         -o-transition-timing-function: easy;
-            transition-timing-function: easy;
-  }
-  .app-cart:hover {
-    -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
-  }
+table th,
+table td {
+  padding: 0px;
 }
 
-.noscript {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-  font-size: 14px;
-  color: #8e1f1f;
-  background-color: #efafaf;
-  text-align: center;
-  z-index: 77777;
+table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 5px;
 }
 
-.noscript a {
-  margin-left: 3px;
-  margin-right: 3px;
-  color: #630303;
-  text-decoration: underline;
+table tr td,
+table tr th {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
-@media (any-hover: hover) {
-  .noscript a:hover {
-    text-decoration: none;
-  }
+table thead,
+table caption {
+  background-color: #ECF5FB;
+}
+
+table tbody tr {
+  border-bottom: 1px dashed #C8CCE1;
 }
 
 .icon {
@@ -586,13 +582,9 @@ b, .bold {
           align-items: center;
 }
 
-.header .logo img {
-  width: 147px;
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .header .logo img {
-    width: 307px;
+    width: 147px;
   }
 }
 
@@ -731,15 +723,12 @@ b, .bold {
             transition-timing-function: ease-in-out;
   }
   .menu__item:hover > a {
-    color: #071D72;
-    font-weight: 700;
+    color: #2746B5;
   }
   .menu__item:hover .menu__level-2 {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    z-index: 50;
-    background: #fff;
   }
   .menu__item:hover .icon {
     -webkit-transform: rotate(-180deg);
@@ -811,9 +800,10 @@ b, .bold {
 @media only screen and (max-width: 1200px) {
   .menu__active {
     background-color: #071D72;
+    color: #fff;
   }
   .menu__active a {
-    color: #fff;
+    color: inherit;
     pointer-events: none;
   }
 }
@@ -826,6 +816,8 @@ b, .bold {
           box-shadow: inset 0px 3px 10px -5px silver;
   width: 100%;
   padding: 9px 0px;
+  z-index: 50;
+  background: #fff;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -888,6 +880,10 @@ b, .bold {
           box-shadow: none;
 }
 
+.menu__level-2 .menu__item a {
+  color: #1F2345;
+}
+
 @media only screen and (min-width: 1200px) {
   .menu__level-2 .menu__item {
     padding: 20px 33px;
@@ -921,10 +917,6 @@ b, .bold {
     -o-transition: inherit;
     transition: inherit;
   }
-}
-
-.menu .icon {
-  fill: rgba(255, 255, 255, 0);
 }
 
 .footer {
@@ -1099,8 +1091,7 @@ b, .bold {
             transition-timing-function: easy;
   }
   .footer__item a:hover {
-    color: #071D72;
-    font-weight: 700;
+    color: #2746B5;
   }
 }
 
@@ -1264,6 +1255,36 @@ b, .bold {
   }
 }
 
+.app-card {
+  -webkit-box-shadow: -3px 6px 19px rgba(0, 0, 0, 0.12);
+          box-shadow: -3px 6px 19px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  display: inline-block;
+}
+
+@media (any-hover: hover) {
+  .app-card {
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: easy;
+         -o-transition-timing-function: easy;
+            transition-timing-function: easy;
+  }
+  .app-card:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+.app {
+  padding: 40px 0px 80px;
+}
+
 @media only screen and (min-width: 1200px) {
   .app {
     padding: 233px 0px 105px;
@@ -1273,26 +1294,32 @@ b, .bold {
 
 .app__inner {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
 }
 
+@media only screen and (min-width: 768px) {
+  .app__inner {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .app__inner {
     padding: 62px 289px 30px;
     background-color: #fff;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
     row-gap: 50px;
     -webkit-column-gap: 75px;
        -moz-column-gap: 75px;
             column-gap: 75px;
-    justify-items: start;
   }
 }
 
@@ -1301,14 +1328,16 @@ b, .bold {
       -ms-flex-order: 2;
           order: 2;
   height: auto;
+  margin-left: auto;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .app__left {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     grid-row: 1 / 3;
+    margin-left: 0;
   }
 }
 
@@ -1319,7 +1348,7 @@ b, .bold {
           order: 1;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .app__heading {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -1342,7 +1371,7 @@ b, .bold {
           flex-direction: column;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .app__social {
     grid-column: 2 / 3;
     display: -webkit-box;
@@ -1364,19 +1393,170 @@ b, .bold {
   margin-bottom: 18px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .app__item:not(:last-child) {
     margin-bottom: 0px;
     margin-right: 34px;
   }
 }
 
-.app__item .app-cart {
+.app__item .app-card {
   padding: 17px 20px;
 }
 
+@media only screen and (max-width: 1199px) {
+  .app__item .app-card img {
+    width: 111px;
+    height: 28px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
-  .app__item .app-cart {
+  .app__item .app-card {
     padding: 31px 22px;
+  }
+}
+
+.convert .h3-title {
+  padding: 12px 45px 21px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .convert .h3-title {
+    padding: 25px 125px 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  @supports ((-moz-column-gap: 27px) or (column-gap: 27px)) {
+    .convert .row {
+      -webkit-column-gap: 27px;
+         -moz-column-gap: 27px;
+              column-gap: 27px;
+    }
+  }
+  @supports not ((-moz-column-gap: 27px) or (column-gap: 27px)) {
+    .convert .row {
+      margin-right: calc( 0px - (27px / 2));
+      margin-left: calc( 0px - (27px / 2));
+    }
+    .convert .row > * {
+      margin-right: calc(27px / 2);
+      margin-left: calc(27px / 2);
+    }
+  }
+}
+
+.convert__table {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 290px;
+      flex-basis: 290px;
+}
+
+@media only screen and (min-width: 768px) {
+  .convert__table {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .convert__table tr {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .convert__table td,
+  .convert__table th {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-preferred-size: 152px;
+        flex-basis: 152px;
+  }
+}
+
+.convert__table thead tr {
+  padding: 0px 45px 12px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .convert__table thead tr {
+    padding: 0px 125px 25px;
+  }
+}
+
+.convert__table thead tr th {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@supports ((-moz-column-gap: 5px) or (column-gap: 5px)) {
+  .convert__table thead tr th {
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+  }
+}
+
+@supports not ((-moz-column-gap: 5px) or (column-gap: 5px)) {
+  .convert__table thead tr th {
+    margin-right: calc( 0px - (5px / 2));
+    margin-left: calc( 0px - (5px / 2));
+  }
+  .convert__table thead tr th > * {
+    margin-right: calc(5px / 2);
+    margin-left: calc(5px / 2);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  @supports ((-moz-column-gap: 13px) or (column-gap: 13px)) {
+    .convert__table thead tr th {
+      -webkit-column-gap: 13px;
+         -moz-column-gap: 13px;
+              column-gap: 13px;
+    }
+  }
+  @supports not ((-moz-column-gap: 13px) or (column-gap: 13px)) {
+    .convert__table thead tr th {
+      margin-right: calc( 0px - (13px / 2));
+      margin-left: calc( 0px - (13px / 2));
+    }
+    .convert__table thead tr th > * {
+      margin-right: calc(13px / 2);
+      margin-left: calc(13px / 2);
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .convert__table thead tr img {
+    width: 30px;
+    height: 17px;
+  }
+}
+
+.convert__table tbody tr {
+  padding: 13px 45px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .convert__table tbody tr {
+    padding: 27px 125px;
   }
 }
