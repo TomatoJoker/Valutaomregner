@@ -23,3 +23,17 @@ if (window.innerWidth < 1200) {
     $('.js-mobile-menu').toggleClass('is-open');
   });
 }
+
+if (window.innerWidth < 768) {
+  $('.js-slider').each(function () {
+    new Swiper(this, {
+      slideClass: 'js-slider-item',
+      pagination: {
+        el: '.pagination-dots',
+        bulletClass: 'pagination-dots__item',
+        bulletActiveClass: 'pagination-dots__active',
+        clickable: 'true'
+      }
+    });
+  });
+}
