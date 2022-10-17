@@ -37,3 +37,37 @@ if (window.innerWidth < 768) {
     });
   });
 }
+
+function formatState(info, state) {
+  if (!info.id) {
+    return info.text;
+  }
+
+  var code = info.id.toString();
+  var originlaOption = $('option[data-code=' + code + ']').first();
+
+  if (!originlaOption) {
+    return info.text;
+  }
+
+  var flagURL = originlaOption.data('flag');
+
+  if (!flagURL) {
+    return info.text;
+  }
+
+  var $state = $('<span class="title">' + info.text + '</span> <img src="' + flagURL + '" class="img-flag" width="40" height="24" alt="' + info.text + '" />');
+  return $state;
+}
+
+;
+$('.js-select').each(function (i, item) {
+  var placeholder = $(this).attr('data-placeholder');
+  $(item).select2({
+    templateSelection: formatState,
+    templateResult: formatState,
+    dropdownParent: $(this).closest('.js-select-container'),
+    width: '100%',
+    selectionCssClass: 'сonverter-сurrency__select-head'
+  });
+});

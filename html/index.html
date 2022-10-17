@@ -98,6 +98,72 @@
     </div> 
 </header>
         <main class="main">
+            <section class="first-section first-section__main">
+    <div class="container">
+        <h1 class="h1-title">Valutaomregner – opdateres live</h1>
+        <div class="row">
+            <a class="first-section__banner" href="#">
+                <img src="./images/banner.jpg" width="295" height="325" alt="">
+            </a>
+            <form class="сonverter-сurrency">
+                <fieldset class="сonverter-сurrency__item">
+                    <label class="hidden" for="value[first]">Enter first value</label>
+                    <div class="сonverter-сurrency__input js-сonverter-сurrency-from">
+                        <input id="value[first]" id="value[first]" value="1" type="tel">
+                    </div>
+                    <div class="сonverter-сurrency__select js-select-container">
+                        <label class="hidden" for="value[select-from]">Select first value</label>
+                        <select class="js-select" name="value[select]" id="value[select-from]">
+                            <optgroup label="Populære">
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="DKK" data-code="DKK" data-flag="./images/country/dk.svg">Danske Kroner</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset class="сonverter-сurrency__item">
+                    <label class="hidden" for="value[first]">Enter second value</label>
+                    <div class="сonverter-сurrency__input js-сonverter-сurrency-from">
+                        <input id="value[first]" id="value[second]" value="7,42" type="tel">
+                    </div>
+                    <div class="сonverter-сurrency__select js-select-container">
+                        <label class="hidden" for="value[select-to]">Select second value</label>
+                        <select class="js-select" name="value[select]" id="value[select-to]">
+                            <optgroup label="Populære">
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="DKK" selected data-code="DKK" data-flag="./images/country/dk.svg">Danske Kroner</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                                <option value="USD" data-code="USD" data-flag="./images/country/us.svg">Amerikanske Dollar</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </fieldset>
+                <button type="button" class="сonverter-сurrency__btn">
+                    <svg width="48" height="49" class="icon icon__stroke">
+                        <use href="./images/icon/sprite.svg#arrow-up-down"></use>
+                    </svg>
+                </button>
+            </form>
+            <a class="first-section__banner" href="#">
+                <img src="./images/banner.jpg" width="295" height="325" alt="">
+            </a>
+        </div>
+    </div>
+</section>
             <section class="app">
     <div class="container">
         <div class="app__inner">
@@ -137,8 +203,8 @@
                     </caption>
                     <thead>
                         <tr>
-                            <th><img src="./images/country/country-1.svg" width="40" height="24" alt="">DKK</th>
-                            <th><img src="./images/country/country-2.svg" width="40" height="24" alt="">USD</th>
+                            <th><img src="./images/country/dk.svg" width="40" height="24" alt="">DKK</th>
+                            <th><img src="./images/country/us.svg" width="40" height="24" alt="">USD</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -190,8 +256,8 @@
                     </caption>
                     <thead>
                     <tr>
-                        <th><img src="./images/country/country-1.svg" alt="">DKK</th>
-                        <th><img src="./images/country/country-2.svg" alt="">USD</th>
+                        <th><img src="./images/country/dk.svg" width="40" height="24" alt="">DKK</th>
+                        <th><img src="./images/country/us.svg" width="40" height="24" alt="">USD</th>
                     </tr>
                     </thead>
                     <tbody>
