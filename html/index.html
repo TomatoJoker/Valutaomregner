@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no"/>
   <title>Home</title>
-
-
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png"/>
   <link rel="preload" href="./fonts/GothamPro/GothamPro.woff" as="font" type="font/woff" crossorigin="">
   <link rel="preload" href="./fonts/GothamPro/GothamPro.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/Muller/MullerRegular.woff" as="font" type="font/woff" crossorigin="">
@@ -106,7 +106,7 @@
                 <img src="./images/banner.jpg" width="295" height="325" alt="">
             </a>
             <form class="сonverter-сurrency">
-                <fieldset class="сonverter-сurrency__item">
+                <fieldset class="сonverter-сurrency__item js-сonverter-from">
                     <label class="hidden" for="value[first]">Enter first value</label>
                     <div class="сonverter-сurrency__input js-сonverter-сurrency-from">
                         <input id="value[first]" id="value[first]" value="1" type="tel">
@@ -129,7 +129,7 @@
                         </select>
                     </div>
                 </fieldset>
-                <fieldset class="сonverter-сurrency__item">
+                <fieldset class="сonverter-сurrency__item js-сonverter-to">
                     <label class="hidden" for="value[first]">Enter second value</label>
                     <div class="сonverter-сurrency__input js-сonverter-сurrency-from">
                         <input id="value[first]" id="value[second]" value="7,42" type="tel">
@@ -169,7 +169,7 @@
         <div class="app__inner">
             <img class="app__left" src="./images/app/app.png" width="290" height="420" alt="">
             <div class="app__heading">
-                <h2 class="h3-title">Download the Convertthecurrency App</h2>
+                <h2 class="section__title h3-title">Download the Convertthecurrency App</h2>
                 <div class="app__text">
                     <p>With the Convertthecurrency app you can convert more than 150 different currencies
                         directly from your smartphone. You can convert GBP into whatever currency you wish,
@@ -310,6 +310,651 @@
         </div>
     </div>
 </section>
+            <section class="section popular">
+    <div class="container">
+        <h2 class="section__title h2-title">Popular Danske Kroner (DKK) Currency Pairingss</h2>
+        <ul class="row">
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/se.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">SEK til DKK</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/no.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">NOK til DKK</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/eu.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">EUR til DKK</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/us.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">USD til DKK</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/gb.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">GBP til DKK</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+            <li class="popular__item">
+                <a class="popular-card app-card" href="#">
+                    <img src="./images/country/bt.svg" width="40" height="24" alt="">
+                    <h4 class="h4-title">Bitcoin kurs</h4>
+                    
+    <svg class="icon icon__stroke" width="24" height="24">
+        <use href="./images/icon/sprite.svg#arrow-right"></use>
+    </svg>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+            <section class="section info-board">
+    <div class="container">
+        <div class="info-board__inner">
+            <div class="info-board__heading content">
+                <h2 class="section__title h2-title">Hold dig opdateret på de seneste valutakurser</h2>
+                <p>Valutakurserne skifter hele tiden, og på valutaomregner.dk får de altid den seneste kurs når du skal
+                    opregne valuta når du f.eks. skal shoppe online fra udlandet, eller se hvor langt dine penge rækker på
+                    ferien.</p>
+                <p>Hvis du altid vil have den seneste valutakurs lige ved hånden, findes valutaomregner.dk også som app, som
+                    du kan finde enten i App Store til iPhone eller i Play Store til din Android telefon. Med app'en har du
+                    altid den seneste valutakurs lige ved hånden, selvom du er ude at rejse, og den virker også uden at du
+                    er på internettet, kursen opdateres så snart du har <a href="">forbindelse til internettet</a>.</p>
+                <p>Valutaomregner.dk finansieres alene via reklamer og bannere, så vi kan tilbyde vores service kvit og frit
+                    til folk der ønsker at omregne valuta. Vi håber I er glade for vores service.</p>
+            </div>
+            <div class="info-board__right">
+                <table class="info-board__table">
+                    <caption class="hidden">Table with valutas informations</caption>
+                    <thead>
+                    <tr>
+                        <th>Valuta</th>
+                        <th>Ændring</th>
+                        <th>Kurs</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/us.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__drop">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__drop">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info-board__left">
+                            <img src="./images/country/dk.svg" alt="">
+                            <span class="info-board__valute-title">
+                            <span class="info-board__valute-name">Amerikanske Dollar</span>
+                            <span>USD</span>
+                        </span>
+                        </td>
+                        <td class="info-board__statistic info-board__grow">
+                            
+    <svg class="icon " width="12" height="16">
+        <use href="./images/icon/sprite.svg#arrow-line"></use>
+    </svg>
+
+                            0.29%
+                        </td>
+                        <td>
+                            203.9685
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-board__social">
+                <h3 class="h2-title section__title">Hent valutaomregner.dk app'en i dag</h3>
+                <ul class="row">
+                    <li class="info-board__item">
+                        <a href="#" class="app-card" target="_blank" rel="nofollow" aria-label="play market">
+                            <img src="./images/app/play-market-lg.svg" alt="" width="259" height="66">
+                        </a>
+                    </li>
+                    <li class="info-board__item">
+                        <a href="#" class="app-card" target="_blank" rel="nofollow" aria-label="appstore">
+                            <img src="./images/app/appstore-lg.svg" alt="" width="259" height="66">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="section content">
+                <div class="container">
+                    <h2>Om Valutaomregner.dk</h2>
+                    <p>Hos Valutaomregner kan du omregne over 180 forskellige valutakurser. Det betyder, at hvis du skal
+                        ud og rejse, købe produkter eller tjenester fra udlandet eller bare er nysgerrig på den
+                        nuværende værdi af en bestemt valuta, får du et nøjagtigt og tidssvarende resultat med vores
+                        beregner.</p>
+                    <p>Valutakursen er et øjebliksbillede på den økonomiske situation i den eller de lande, hvor
+                        valutaen bruges. Kursen skal altid ses i forhold til en anden valuta, og til det bruges en
+                        valutaomregner. Den viser styrkeforholdet mellem de to valutaer. </p>
+                    <p>Valutaomregner.dk opdateres mange gange dagligt, så du altid har opdaterede kurser på mere end
+                        180 forskellige valutaer fra hele verden. Valutaomregneren henter løbende sine valutakurser fra
+                        verdens førende valutabørser.</p>
+                    <h2>Ofte stillede spørgsmål om valutaomregner</h2>
+                    <ul class="grid grid__col-2 list-without-style">
+                        <li class="app-card">
+                            <h3>Hvad er en valutaomregner?</h3>
+                            <p>En valutaomregner omregner beløb fra valgte valutaer i den gældende kurs. Den kan
+                                eksempelvis bruges til at finde ud af, hvor mange amerikanske dollars, du kan få for et
+                                givent beløb i danske kroner. Den beregning bliver også kaldt <a href="#">USD til
+                                    DKK</a>.</p>
+                        </li>
+                        <li class="app-card">
+                            <h3>Hvad er en valutakurs?</h3>
+                            <p>En valutakurs er et øjebliksbillede af, hvor mange penge en given valuta er værd i
+                                forhold til en anden. Valutakurser fortæller dig om forholdet eller forskellen i værdi
+                                mellem to valutaer.
+                                De fleste lande har deres egen valuta – eller de deles om en fællesvaluta som euroen
+                                (EUR) i mange EU-lande.</p>
+                        </li>
+                        <li class="app-card">
+                            <h3>Hvordan fastsættes valutakurser?</h3>
+                            <p>Grundlæggende set reguleres kurserne af udbud/efterspørgsel og et lands eller en forening
+                                af landes førte valutapolitik.</p>
+                        </li>
+                        <li class="app-card">
+                            <h3>Hvordan omregner jeg fremmede valutaer til danske kroner (DKK)?</h3>
+                            <p>På Valutaomregner.dk kan du frit omregne over 180 forskellige valutaer, inklusiv danske
+                                kroner (DKK).</p>
+                        </li>
+                    </ul>
+                    <h2>Bør jeg veksle valuta hjemmefra?</h2>
+                    <p>Et af de tidspunkter, hvor mange kigger på valutaen er i forbindelse med en rejse.</p>
+                    <p>De fleste danskere har stået i den situation: Er det smartest at hæve valutaen hjemmefra inden en
+                        rejse,
+                        eller er det bedre at vente?<br>
+                        Det spørgsmål kan der være forskellige svar til. Umiddelbart vil svaret dog som regel være, at
+                        det er bedst at hæve i udlandet.</p>
+                    <p>Oftest tager de fleste banker og vekselbureauer i Danmark et gebyr for at hæve valutaen til dig,
+                        hvilket af gode grunde ikke vises på din valutaomregner. Du kan også risikere, at de giver dig
+                        en dårligere kurs, end du vil få på din feriedestination. Hvis du skal holde dig opdateret på
+                        valutakurserne i udlandet, så anbefaler vi, at du benytter en VPN tjeneste til at øge din online
+                        sikkerhed.</p>
+                    <p>Du skal derfor overveje, om du vil veksle hjemmefra, og det valg afhænger ofte af, hvor du rejser
+                        hen. I mange lande har du nemlig en udmærket mulighed for enten at:</p>
+                    <ul>
+                        <li>Hæve kontakter i en automat på din feriedestination</li>
+                        <li>Veksle, når du ankommer til landet</li>
+                        <li> Betale direkte med kort, når du skal bruge penge på din rejse</li>
+                    </ul>
+                    <h2>Bør jeg veksle valuta hjemmefra?</h2>
+                    <p>Hvis du vil bruge dit kort direkte i butikkerne, som du gør herhjemme i Danmark, bør du dog lige
+                        tjekke, om din bank kræver et højt gebyr for brugen af dit kort i udlandet. Det kan nogle gange
+                        være tilfældet, og så kan det hurtigt blive en dyr fornøjelse.</p>
+                    <p>Samtidig er det også en god ide at være ekstra opmærksom, hvis du bruger hæveautomater et
+                        fremmede sted.</p>
+                    <h2>I danske kroner eller den lokale valuta?</h2>
+                    <p>Valutakursen kan svinge ret meget, fordi du nogle gange skal tage stilling til, om du vil afregne
+                        i danske kroner eller den lokale valuta.</p>
+                    <p>I sådanne tilfælde kan en valutaomregner være en god hjælp at have ved hånden. På den måde har du
+                        en bedre mulighed for at tage det mest økonomiske og fornuftige valg.</p>
+                    <p>Det kan derfor være en udmærket løsning ikke at veksle hjemmefra, men det kræver samtidig, at du
+                        er sikker på, at du kan veksle, betale med kort eller hæve på din rejse. Du kan nemlig også
+                        risikere, at de muligheder enten ikke er der eller er begrænset. Derfor skal du nøje sætte dig
+                        ind i hjemmefra, hvad mulighederne er på lige netop din rejse. Det ville være forfærdeligt at
+                        komme af sted uden penge på lommen til feriens aktiviteter, mad og så videre.</p>
+                    <p>Vær dog opmærksom på, at nogle banker tager et gebyr hver gang kortet bruges i udlandet, og at
+                        kursen kan variere fra hæveautomat til hæveautomat. Desuden kan du blive spurgt, om du vil
+                        afregne i danske kroner eller den lokale valuta. Det er tit svært at gennemskue. Der findes et
+                        par alternativer til at veksle valuta, blandt andet Travel Card fra danske Lunar Way og det
+                        internationale <a href="#">Revolut</a>.</p>
+                    <h2>Hvad koster det at handle valutakurser?</h2>
+                    <p>En valutaomregner kan vise sig at være vigtig i mange situationer.</p>
+                    <p>Både ved de helt almindelige dagligdags ting, som når du køber ind online, men også hvis du netop
+                        handler med valuta.</p>
+                    <p>Som du måske kan fornemme af det overstående, er valutamarkedet en kompleks ting. Det betyder dog
+                        ikke, at du ikke kan handle valuta. </p>
+                    <p>At handle valuta kan umiddelbart forstås på flere forskellige måder. For eksempel kan det
+                        betyder, at du aktivt deltager i markedet med store investeringer, og derfor også risikerer at
+                        tabe en del penge. Hvis du forstå ’at handle valuta’ i dag på den måde, er det faktisk blevet
+                        nemt at handle i dag, og du kan både være heldig at tjene godt på det, men du kan også være
+                        uheldig og tabe en del. Er du ny på markedet, er det derfor en rigtig god ide, at du sætter dig
+                        grundigt ind i det, inden du begynder på de helt store investeringer. Det er en god ide at lægge
+                        en plan og følge valutakurserne. Du kan blandt andet følge med i kurserne på en
+                        valutaomregner.</p>
+                    <p>En anden måde at forstå handlen med valuta på er ved at veksle. Hvis du ikke er interesseret i at
+                        gå ind i markedet, som du ville gøre det på aktiemarkedet, men blot købe valuta, skal du være
+                        opmærksom på to faktorer:</p>
+                    <ol>
+                        <li>Hvor meget valutaen koster, afhænger af de vekselgebyrer, som banken tager for at veksle
+                        </li>
+                        <li>Prisen afhænger også af, hvornår du køber dem</li>
+                    </ol>
+                    <p>Du kan derfor med fordel undersøge, hvilke gebyrer de forskellige banker kan tilbyde dig.</p>
+                    <h2>Sådan fastsættes valutakurserne</h2>
+                    <p>De færreste ved hvordan valutakurserne fastsættes. Det er som udgangspunkt ikke nødvendigt at
+                        vide, men interesserer du dig for valutapolitik, er det rart nok at have kendskab til, selv om
+                        det kan forekomme en smule kompliceret.</p>
+                    <p>Grundlæggende handler fastsættelsen af valutakurser om udbud og efterspørgsel. Det er begreber,
+                        som de fleste nok er stødt på i samfundsfagstimerne i gymnasiet. Valutakurserne reguleres altså
+                        kort sagt efter udbud og efterspørgsel og ikke mindst landets førte valutapolitik, som er en
+                        økonomisk politik.</p>
+                    <p>Med andre ord kan valutakurser altså ændre sig løbende, hvilket en valutaomregner også vil kunne
+                        vise dig. For at forstå disse ændringer bør du kende til de måder, hvorpå kurserne justeres på.
+                        Der er nemlig lidt forenklet sagt to måder, det sker på:</p>
+                    <ul>
+                        <li>Flydende valutakurser</li>
+                        <li>Fastkurspolitik</li>
+                    </ul>
+                    <h2>Flydende valutakurs</h2>
+                    <p>Den første måde, <a href="">flydende valutakurs</a>, er afhængig af markedet. Det betyder, at
+                        kursen falder,
+                        hvis mange sælger ud af den givne valuta. Derimod stiger kursen, hvis mange køber valutaen.</p>
+                    <p>Denne måde fungerer dermed som aktiehandel på aktiemarkedet, hvor det netop er efterspørgsel og
+                        udbud, der er de gældende parametre. </p>
+                    <h2>Fastkurspolitik</h2>
+                    <p>Fastkurspolitik er helt anderledes. Her er kursen mere stabil, fordi den bliver holdt i ro af den
+                        politik, som et land fører.</p>
+                    <p>Hvor lande som USA og Sverige benytter sig af flydende valutakurser, har et land som Danmark
+                        fastkurspolitik. Det betyder helt grundlæggende, at den danske krone generelt bliver holdt så
+                        tæt på 7,46 euro som muligt uden at lave for store svingninger. Kursen er dermed mere stabil,
+                        hvilket du også vil kunne se, hvis du taster oplysningerne ind på en valutaomregner.</p>
+                    <p>Ud over flydende valutakurser og <a href="#">fastkurspolitik</a> er du måske også stødt på de to
+                        instrumenter, devaluering og revaluering. Det er ligeledes to vigtige begreber, hvis du gerne
+                        vil forstå fastsættelsen af en valutakurs. Det er nemlig de to instrumenter der blandt andet
+                        anvendes ved ændring af valutakurser.</p>
+                    <p>Ved devaluering stiger eksport, men importen falder. Modsat falder eksport, men importen stiger
+                        ved revaluering. Begge instrumenter, såvel import og eksport, har betydning for et lands
+                        betalingsbalance. Der er en forbedring i betalingsbalancen, hvis importen falder, og eksporten
+                        stiger, men der er mere i det end som så. Det vigtigste er, at der er ligevægt i
+                        betalingsbalancen, da det ellers kan føre til inflation. Det er for eksempel også blandt
+                        årsagerne til, hvorfor Danmark fører en fastkurspolitik.</p>
+                    <h2>Hvorfor har Danmark ikke euroen som valuta?</h2>
+                    <p>Blandt andet fordi Danmark fører fastkurspolitik i forhold til euroen, diskuteres det jævnligt,
+                        om vi bør erstatte kronen med den fælles europæiske valuta, Euroen.</p>
+                    <p>Et af Danmarks fire EU-forbehold går ud på, at vi ikke deltager i det, der kaldes tredje fase af
+                        EU’s Økonomiske og Monetære Union (ØMU), som er indførelsen af euroen som valuta.</p>
+                    <p>Den 28. september blev der afholdt en folkeafstemning om Danmarks tilslutning til euroen. 53,2
+                        procent stemte nej, og valgte dermed at beholde kronen som dansk valuta. Især de dele af
+                        erhvervslivet, der har stor eksport til EU-lande ønsker, at Danmark går over til euroen. Det vil
+                        nemlig gøre handlen på tværs af landegrænser lettere, at man ikke behøver en valutaomregner for
+                        at finde ud af, hvilket beløb man skal skrive på sin faktura. </p>
+                    <h2>Valutakurser og deres betydning</h2>
+                    <p>Som med aktiemarkedet er valutamarkedet også påvirkelig overfor stemninger, forventninger,
+                        handelspolitik og meget andet. Det kan man forsøge at regulere politisk gennem den
+                        valutapolitik, man fører: devaluering og revaluering.</p>
+                    <p>Gennemføres en devaluering sænkes valutakursen i forhold til andre landes valutaer. Det vil øge
+                        landets eksport og mindske importen, fordi det bliver billigere for udlandet at købe varer, og
+                        det bliver dyrere at importere varer. Af samme grund styrkes konkurrenceevnen.</p>
+                    <p>Det modsatte sker ved en revaluering, hvor valutakursen i forhold til andre kurser sættes op.
+                        Danmarks fastkurspolitik overfor euroen betyder, at devaluering og revaluering ikke længere kan
+                        bruges som redskaber i valutapolitikken. Det skal i givet fald ske fra ECB, der traditionelt
+                        helst vil undgå at regulere for meget, og dermed risikere økonomisk uro i hele Eurozonen.</p>
+                    <p>Valutamarkedet og derigennem verdensøkonomien er mest påvirket af de største valutaer: den
+                        amerikanske dollar (USD), euroen (EUR) og den kinesiske yuan. (CNY)</p>
+                    <h2>Valutakurser og deres betydning</h2>
+                    <p>Valutakurser og valutapolitik kan virke abstrakt, men faktisk er det meget konkret. Det er
+                        selvfølgelig især aktuelt, når du rejser eller skal købe eller sælge noget til udlandet - og her
+                        er det godt at have Valutaomregner.dk med. Kursen kan ikke fortælle dig, hvor meget du kan købe
+                        i et andet land, men den kan fortælle, hvor meget din valuta (danske kroner du bor i Danmark) er
+                        værd i et andet land - og det er vigtig viden. </p>
+                    <p><em>Her er et eksempel:</em></p>
+                    <p>I sommeren 2018 indførte USA en række toldsatser på varer fra Tyrkiet. Den forventede nedgang i
+                        eksport fra Tyrkiet fik tiltroen til den tyrkiske økonomi til at falde, og det sendte kursen på
+                        den tyrkiske valuta, liraen, (TRY) ud i nærmest frit fald. Godt for de danske turister i
+                        Tyrkiet, der som følge af den faldende kurs fik langt større købekraft. Skidt for den
+                        almindelige tyrker og danske virksomheder som eksporterede til Tyrkiet.</p>
+                    <p>23. juni 2016 besluttede Storbritannien, efter en folkeafstemning, at forlade EU. Dagen før kunne
+                        nyhedsbureauet Reuters fortælle, at briterne købte euro og amerikanske dollars i stor stil. Det
+                        skete for at gardere sig mod det forventede kursfald for det britiske pund, hvis afstemningen
+                        endte med et nej. Afstemningsresultatet fik ganske vigtigt valutakursen på det britiske pund til
+                        at falde en del.</p>
+                    <h2>Få billige valuta på rejsen</h2>
+                    <p>Rigtig mange danskere har vænnet sig til at veksle valuta hjemmefra, selvom det sjældent kan
+                        betale sig.</p>
+                    <p>Banker og vekselbureauer har det med enten at tage et gebyr eller give en dårligere kurs end
+                        markedskursen, som du kan finde ved at bruge en valutaomregner. Derudover kan du ikke være
+                        sikker på at veksle det beløb, du rent faktisk har brug for på rejsen. Skal du sælge valuta,
+                        fordi du har købt for mange, får du ofte en betydeligt dårligere kurs. Det kan derfor koste
+                        mange penge at veksle et for stort beløb.</p>
+                    <p><a href="">Som regel kan det bedre betale sig at vente til du når frem til bestemmelsesstedet, og
+                            så veksle
+                            der.</a></p>
+                    <p>En anden mulighed er, at bruge kortet til at betale med i butikker osv. ligesom i Danmark.</p>
+                    <p>Bankerne kan dog lægge et relativt højt gebyr på brugen af kort i udlandet, så tjek det inden
+                        afrejse. Vær ekstra opmærksom, hvis du bruger hæveautomater. Her kan valutakursen svinge en hel
+                        del.</p>
+                    <p>Du kan blive spurgt om du vil afregne i danske kroner, eller den lokale valuta. Nogle gange
+                        kræver det den helt store kugleramme fremme for at regne ud, hvad der bedst kan betale sig.</p>
+                    <h2>Valutakurser</h2>
+                    <p>På denne side finder du <strong>aktuelle valutakurser</strong> – opdateret dag for dag.</p>
+                    <p>Skal du beregne eller oversætte beløbet i en valuta til en anden? Så brug vores valutaomregner i
+                        stedet.</p>
+                    <p>I oversigten foroven kan du danne dig et overblik over de vigtigste kurser og seneste
+                        udviklinger. Leder du efter en kurs, som ikke er repræsenteret på denne side endnu, kan du finde
+                        den på forsiden i vores beregner. Ændringsprocenten angiver udviklingen fra i går til i dag.</p>
+                    <h2>Hvad er valutakurser?</h2>
+                    <p><img width="600" height="232" class="wp-image-426 alignright"
+                            src="https://valutaomregner.dk/wp-content/uploads/2020/09/valutakurser.jpg" alt="">
+                        Valutakurser fortæller dig om <strong>forholdet eller forskellen i værdi mellem to
+                            valutaer</strong>.</p>
+                    <p>De fleste lande har deres egen valuta. I Danmark har vi eksempelvis <strong>danske
+                            kroner</strong> <a href="#">(DKK)</a>, hvorimod
+                        de i USA har amerikanske dollars <a href="#">(USD)</a>.</p>
+                    <p>En række lande har nære økonomiske forhold, og har derfor valgt at have en fælles valuta.
+                        <strong>Euroen</strong>
+                        <a href="#">(EUR)</a> er eksempelvis den fælles valuta i store dele af EU. Selvom vi i Danmark
+                        ikke er del af
+                        den fælles europæiske valuta, er værdien af den danske krone dog “låst” til euroen. Det betyder,
+                        at valutakursen mellem de to ikke må afvige med mere end to procent.</p>
+                    <p>Det er ikke alle former for valuta, der er tilknyttet et bestemt land eller region. <strong>Digitale
+                        valutaer</strong> såsom <strong>bitcoin</strong>, er uafhængige af stater og centralbanker. Det betyder også, at
+                        udviklingen i kurspriserne ofte kan være mere eksplosiv, end hvis værdien af valutaen var bundet
+                        til konkrete handelsmarkeder og produktion.</p>
+                    <p>Politiske og økonomiske forandringer kan være med til at påvirke en kurs.</p>
+                    <p>Valutakursen kan dermed falde drastisk, hvilket kan få stor betydning, hvis man skal rejse til en
+                        destination, hvor den givne valuta benyttes – eller har købt varer fra det pågældende land.</p>
+                    <p>En svingende valutakurs har også store konsekvenser, hvis du handler med aktier eller har
+                        investeringer i udlandet.</p>
+                    <h2>Hvad er valuta?</h2>
+                    <p>Valuta er en betegnelse for en officiel møntenhed. Den fortæller dig om værdien af en enkelt
+                        enhed af (ofte et lands) betalingsmiddel.</p>
+                    <p><strong>Ordet valuta stammer fra det latinske valere, som betyder “at gælde” eller “være værd”</strong>. Det er
+                        altså en form for gældsbrev, der har en bestemt værdi for alle, som anerkender den specifikke
+                        møntfod.</p>
+                    <h2>Hvilke kilder bruger vores valutakurser?</h2>
+                    <p>I vores valutaomregner kan du følge og sammenligne kursen på mere end 180 forskellige valutaer.
+                        Vi opdaterer vores valutakurser flere gange dagligt, så du altid får de aktuelle kurser.</p>
+                    <p>Vi får vores data fra en række forskellige kommercielle kilder og banker rundt omkring i verden.
+                        Det gør vi for at sikre, at vores veksel- og valutakurser er retvisende.</p>
+                    <p>Vi benytter os af en valideringsalgoritme, som løbende sammenligner vores forskellige datakilder
+                        mod hinanden. Det hjælper os med at finde misvisende eller forkerte datapunkter, og fjerne dem
+                        fra vores oversigt. Hermed kan vi garantere valutakurser, som er præcise hele vejen ned til det
+                        sjette decimal.</p>
+                    <p>Værdien på de bestemte valutaer ændrer sig flere gange om dagen. Langt størstedelen af de udsving
+                        vil dog være minimale. Det er medmindre, der indtræffer en international krise eller en større
+                        forandring af udbud og efterspørgsel på det gældende valutamarked.</p>
+                    <h2>Hvordan omregner man valuta?</h2>
+                    <p>Når du skal omregne valutaer, kræver det, at du kender værdien på en valuta i forhold til en
+                        anden.</p>
+                    <p>Da værdien af de enkelte valutaer forandrer sig fra dag til dag – og i visse tilfælde fra minut
+                        til minut – er det oftest nemmeste at omregne valuta med en omregner som vores. Den finder du på
+                        vores forside.</p>
+                    <p>Her skal du blot vælge de to valutaer, du ønsker at sammenligne, og indtaste den specifikke
+                        mængde/værdi, du ønsker at omregne.</p>
+                    <p>Normalværdien for valutakurser er som regel altid sat til 100 enheder af enten den hjemlige eller
+                        fremmede valuta. Det vil sige, hvis du skal have valutakursen på eksempelvis amerikanske
+                        dollars, vil resultatet oftest tage udgangspunkt i hvor meget 100 dollars er værd i danske
+                        kroner.</p>
+                    <p>Hvis kursen på begge valutaer er identisk, kaldes den også for <i>pari</i>.</p>
+                    <h2>Kan man bruge vores valutaomregner i udlandet?</h2>
+                    <p>Ja, det kan du nemt. Du skal bare hente vores app her, i <a
+                                href="https://apps.apple.com/dk/app/valutaomregner-dk/id1484053118" target="_blank"
+                                rel="noopener">App Store</a> til iOS (iPhone) eller <a
+                                href="https://play.google.com/store/apps/details?id=com.cs.valutaomregner&amp;hl=da"
+                                target="_blank" rel="noopener">Google Play</a> til Android.</p>
+                    <p>App'en er udviklet til at kunne blive brugt i udlandet – også til at udregne den aktuelle kurs.
+                        Og du behøves ikke være forbundet til internet for at omregne kursen eller beløbet. Er din enhed
+                        ikke online, så vil den dog tage den sidst hentede kurs fra telefonen var online. Som det ses i
+                        kurserne ovenfor, så er det dog en meget lille procentdel, som sikkert vil være til forskel.</p>
+                    <h2>Valutaomregner i flere lande</h2>
+                    <div class="row">
+                        <p>Vi har også en valutaomregner i Norge <a href="#">(valutakalkulator)</a>, Sverige <a href="">(valutaomvandlare)</a> og
+                            Finland <a href="#">(valuuttamuunnin)</a>.</p>
+                        <div class="app-card">
+                            <h3>Samarbejdspartnere</h3>
+                            <ul class="list-without-style">
+                                <li><a href="#">vpnXpert</a> - Bedste VPN</li>
+                                <li><a href="#">Samlelån</a> fra Bankly.dk</li>
+                                <li><a href="#">Casino</a> uden svensk licens</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
     <div class="container">

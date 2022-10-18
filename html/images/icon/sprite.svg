@@ -15,5 +15,11 @@
             <path d="m22 34.5-8 8-8-8M14 42.5v-24M42 14.5l-8-8-8 8M34 30.5v-24" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+        <symbol id="arrow-right" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="m9 18.5 6-6-6-6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="arrow-line" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 0 .226 10h11.547L6 0Zm1 16V9H5v7h2Z"/>
+        </symbol>
     </defs>
 </svg>
