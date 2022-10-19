@@ -9,13 +9,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./images/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/x-icon" sizes="16x16" href="./images/favicon/favicon-16x16.png"/>
   <link rel="preload" href="./fonts/GothamPro/GothamPro.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="./fonts/GothamPro/GothamPro.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerRegular.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerRegular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerMedium.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerMedium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerBold.woff" as="font" type="font/woff" crossorigin="">
-  <link rel="preload" href="./fonts/Muller/MullerBold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/GothamPro/GothamPro-Medium.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="./fonts/GothamPro/GothamPro-Bold.woff" as="font" type="font/woff" crossorigin="">
+
+
+
+
+
+
+
   <link rel="stylesheet" type="text/css" href="./css/lib.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
@@ -51,7 +53,7 @@
                         </ul>
                     </li>
                     <li class="menu__item"><a href="#">Bitcoin kurs</a></li>
-                    <li class="menu__item"><a href="#">Blog</a></li>
+                    <li class="menu__item "><a href="#">Blog</a></li>
                     <li class="menu__item"><a href="#">App</a></li>
                 </ul>
                 <button class="header__burger js-burger-btn">
@@ -101,10 +103,10 @@
             <section class="first-section first-section__main">
     <div class="container">
         <h1 class="h1-title">Valutaomregner – opdateres live</h1>
-        <div class="row">
-            <a class="first-section__banner" href="#">
-                <img src="./images/banner.jpg" width="295" height="325" alt="">
-            </a>
+        <div class="first-section__converter-wrapper">
+
+
+
             <form class="сonverter-сurrency">
                 <fieldset class="сonverter-сurrency__item js-сonverter-from">
                     <label class="hidden" for="value[first]">Enter first value</label>
@@ -129,6 +131,11 @@
                         </select>
                     </div>
                 </fieldset>
+                <button type="button" class="сonverter-сurrency__btn">
+                    <svg width="48" height="49" class="icon icon__stroke">
+                        <use href="./images/icon/sprite.svg#arrow-up-down"></use>
+                    </svg>
+                </button>
                 <fieldset class="сonverter-сurrency__item js-сonverter-to">
                     <label class="hidden" for="value[first]">Enter second value</label>
                     <div class="сonverter-сurrency__input js-сonverter-сurrency-from">
@@ -152,15 +159,10 @@
                         </select>
                     </div>
                 </fieldset>
-                <button type="button" class="сonverter-сurrency__btn">
-                    <svg width="48" height="49" class="icon icon__stroke">
-                        <use href="./images/icon/sprite.svg#arrow-up-down"></use>
-                    </svg>
-                </button>
             </form>
-            <a class="first-section__banner" href="#">
-                <img src="./images/banner.jpg" width="295" height="325" alt="">
-            </a>
+
+
+
         </div>
     </div>
 </section>
@@ -195,9 +197,9 @@
             <section class="convert section">
     <div class="container">
         <h2 class="hidden">Currency conversion</h2>
-        <div class="convert__inner swiper js-slider">
+        <div class="convert__inner swiper js-slider-convert">
             <div class="row swiper-wrapper">
-                <table class="convert__table js-slider-item">
+                <table class="convert__table swiper-slide">
                     <caption class="h3-title">
                         Convert Danske Kroner (DKK) to US Dollar
                     </caption>
@@ -250,7 +252,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <table class="convert__table js-slider-item">
+                <table class="convert__table swiper-slide">
                     <caption class="h3-title">
                         Convert Danske Kroner (DKK) to US Dollar
                     </caption>
@@ -684,33 +686,38 @@
                         180 forskellige valutaer fra hele verden. Valutaomregneren henter løbende sine valutakurser fra
                         verdens førende valutabørser.</p>
                     <h2>Ofte stillede spørgsmål om valutaomregner</h2>
-                    <ul class="grid grid__col-2 list-without-style">
-                        <li class="app-card">
-                            <h3>Hvad er en valutaomregner?</h3>
-                            <p>En valutaomregner omregner beløb fra valgte valutaer i den gældende kurs. Den kan
-                                eksempelvis bruges til at finde ud af, hvor mange amerikanske dollars, du kan få for et
-                                givent beløb i danske kroner. Den beregning bliver også kaldt <a href="#">USD til
-                                    DKK</a>.</p>
-                        </li>
-                        <li class="app-card">
-                            <h3>Hvad er en valutakurs?</h3>
-                            <p>En valutakurs er et øjebliksbillede af, hvor mange penge en given valuta er værd i
-                                forhold til en anden. Valutakurser fortæller dig om forholdet eller forskellen i værdi
-                                mellem to valutaer.
-                                De fleste lande har deres egen valuta – eller de deles om en fællesvaluta som euroen
-                                (EUR) i mange EU-lande.</p>
-                        </li>
-                        <li class="app-card">
-                            <h3>Hvordan fastsættes valutakurser?</h3>
-                            <p>Grundlæggende set reguleres kurserne af udbud/efterspørgsel og et lands eller en forening
-                                af landes førte valutapolitik.</p>
-                        </li>
-                        <li class="app-card">
-                            <h3>Hvordan omregner jeg fremmede valutaer til danske kroner (DKK)?</h3>
-                            <p>På Valutaomregner.dk kan du frit omregne over 180 forskellige valutaer, inklusiv danske
-                                kroner (DKK).</p>
-                        </li>
-                    </ul>
+                    <div class="js-slider-card swiper">
+                        <ul class="grid grid__col-2 list-without-style swiper-wrapper">
+                            <li class="app-card swiper-slide">
+                                <h3>Hvad er en valutaomregner?</h3>
+                                <p>En valutaomregner omregner beløb fra valgte valutaer i den gældende kurs. Den kan
+                                    eksempelvis bruges til at finde ud af, hvor mange amerikanske dollars, du kan få for et
+                                    givent beløb i danske kroner. Den beregning bliver også kaldt <a href="#">USD til
+                                        DKK</a>.</p>
+                            </li>
+                            <li class="app-card swiper-slide">
+                                <h3>Hvad er en valutakurs?</h3>
+                                <p>En valutakurs er et øjebliksbillede af, hvor mange penge en given valuta er værd i
+                                    forhold til en anden. Valutakurser fortæller dig om forholdet eller forskellen i værdi
+                                    mellem to valutaer.
+                                    De fleste lande har deres egen valuta – eller de deles om en fællesvaluta som euroen
+                                    (EUR) i mange EU-lande.</p>
+                            </li>
+                            <li class="app-card swiper-slide">
+                                <h3>Hvordan fastsættes valutakurser?</h3>
+                                <p>Grundlæggende set reguleres kurserne af udbud/efterspørgsel og et lands eller en forening
+                                    af landes førte valutapolitik.</p>
+                            </li>
+                            <li class="app-card swiper-slide">
+                                <h3>Hvordan omregner jeg fremmede valutaer til danske kroner (DKK)?</h3>
+                                <p>På Valutaomregner.dk kan du frit omregne over 180 forskellige valutaer, inklusiv danske
+                                    kroner (DKK).</p>
+                            </li>
+                        </ul>
+                        <div class="pagination-dots">
+
+                        </div>
+                    </div>
                     <h2>Bør jeg veksle valuta hjemmefra?</h2>
                     <p>Et af de tidspunkter, hvor mange kigger på valutaen er i forbindelse med en rejse.</p>
                     <p>De fleste danskere har stået i den situation: Er det smartest at hæve valutaen hjemmefra inden en
@@ -860,9 +867,10 @@
                         sikker på at veksle det beløb, du rent faktisk har brug for på rejsen. Skal du sælge valuta,
                         fordi du har købt for mange, får du ofte en betydeligt dårligere kurs. Det kan derfor koste
                         mange penge at veksle et for stort beløb.</p>
-                    <p><a href="">Som regel kan det bedre betale sig at vente til du når frem til bestemmelsesstedet, og
-                            så veksle
-                            der.</a></p>
+                    <p>
+                        <strong>Som regel kan det bedre betale sig at vente til du når frem til bestemmelsesstedet, og
+                            så veksle der.</strong>
+                    </p>
                     <p>En anden mulighed er, at bruge kortet til at betale med i butikker osv. ligesom i Danmark.</p>
                     <p>Bankerne kan dog lægge et relativt højt gebyr på brugen af kort i udlandet, så tjek det inden
                         afrejse. Vær ekstra opmærksom, hvis du bruger hæveautomater. Her kan valutakursen svinge en hel
@@ -891,7 +899,7 @@
                         den fælles europæiske valuta, er værdien af den danske krone dog “låst” til euroen. Det betyder,
                         at valutakursen mellem de to ikke må afvige med mere end to procent.</p>
                     <p>Det er ikke alle former for valuta, der er tilknyttet et bestemt land eller region. <strong>Digitale
-                        valutaer</strong> såsom <strong>bitcoin</strong>, er uafhængige af stater og centralbanker. Det betyder også, at
+                        valutaer</strong> såsom <a href="#">bitcoin</a>, er uafhængige af stater og centralbanker. Det betyder også, at
                         udviklingen i kurspriserne ofte kan være mere eksplosiv, end hvis værdien af valutaen var bundet
                         til konkrete handelsmarkeder og produktion.</p>
                     <p>Politiske og økonomiske forandringer kan være med til at påvirke en kurs.</p>

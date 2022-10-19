@@ -24,18 +24,24 @@ if (window.innerWidth < 1200) {
   });
 }
 
-if (window.innerWidth < 768) {
-  $('.js-slider').each(function () {
-    new Swiper(this, {
-      slideClass: 'js-slider-item',
-      pagination: {
-        el: '.pagination-dots',
-        bulletClass: 'pagination-dots__item',
-        bulletActiveClass: 'pagination-dots__active',
-        clickable: 'true'
-      }
+slider('.js-slider-convert');
+slider('.js-slider-card');
+
+function slider(sliderSelector) {
+  if (window.innerWidth < 767) {
+    $(sliderSelector).each(function () {
+      new Swiper(this, {
+        swiperPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: sliderSelector + ' .pagination-dots',
+          bulletClass: 'pagination-dots__item',
+          bulletActiveClass: 'pagination-dots__active',
+          clickable: 'true'
+        }
+      });
     });
-  });
+  }
 }
 
 function formatState(info, state) {
@@ -56,13 +62,12 @@ function formatState(info, state) {
     return info.text;
   }
 
-  var $state = $('<span class="title">' + info.text + '</span> <img src="' + flagURL + '" class="img-flag" width="40" height="24" alt="' + info.text + '" />');
+  var $state = $('<span><span class="сonverter-сurrency__value">' + info.text + '</span><span class="сonverter-сurrency__value-abbreviation">' + code + '</span></span> <img class="сonverter-сurrency__img" src="' + flagURL + '" width="40" height="24" alt="' + info.text + '" />');
   return $state;
 }
 
 ;
 $('.js-select').each(function (i, item) {
-  var placeholder = $(this).attr('data-placeholder');
   $(item).select2({
     templateSelection: formatState,
     templateResult: formatState,

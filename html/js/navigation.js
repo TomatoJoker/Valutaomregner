@@ -13,5 +13,5 @@ function pageWidget(pages) {
 }
 
 $(function () {
-  pageWidget(['index']);
+  pageWidget(['index', 'blog']);
 });
