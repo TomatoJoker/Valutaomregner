@@ -13,5 +13,5 @@ function pageWidget(pages) {
 }
 
 $(function () {
-  pageWidget(['index', 'blog']);
+  pageWidget(['index', 'blog', 'author', 'artikler', 'app', 'privacy-policy']);
 });
