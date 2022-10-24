@@ -13,5 +13,5 @@ function pageWidget(pages) {
 }
 
 $(function () {
-  pageWidget(['index', 'blog', 'author', 'artikler', 'app', 'privacy-policy']);
+  pageWidget(['index', 'dkk', 'bitcoin', 'blog', 'author', 'artikler', 'app', 'privacy-policy']);
 });
