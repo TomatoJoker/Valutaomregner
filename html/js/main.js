@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(function () {
   var overlay = $('.js-overlay');
   $('.js-burger-btn').on('click', function () {
@@ -25,7 +27,6 @@ $(function () {
     });
     $('.js-option').on('click', function () {
       var $value = $(this).text();
-      console.log($value);
       $(this).parent('.js-mobile-menu').removeClass('is-open').siblings('.js-mobile-menu-btn').removeClass('is-active').find('span').text($value);
     });
   }
@@ -138,13 +139,99 @@ $(function () {
   $(window).resize(function () {
     select('.js-select');
   });
-  graph('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json');
+  $('.js-tab').on('click', function () {
+    $('.js-tab').removeClass('active-tab');
+    $(this).addClass('active-tab'); // click(this);
+  });
+  graph();
+  Highcharts.setOptions({
+    lang: {
+      rangeSelectorZoom: ''
+    }
+  }); // function click(item) {
+  //     let number = $(item).parent('li').index(),
+  //         el = '.highcharts-button:nth-child(' + parseFloat(number + 1) + ')';
+  //     console.log(el);
+  //     $('.highcharts-button:nth-child(' + parseFloat(number + 1) + ')').click();
+  // }
 
-  function graph(dataGraph) {
-    Highcharts.getJSON(dataGraph, function (data) {
-      var chart = Highcharts.chart('graph', {
+  function graph() {
+    Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json', function (data) {
+      var _rangeSelector;
+
+      var chart = Highcharts.stockChart('graph', {
+        rangeSelector: (_rangeSelector = {
+          selected: 4,
+          buttonPosition: {
+            align: 'center'
+          },
+          buttonSpacing: 70,
+          buttonTheme: {
+            // styles for the buttons
+            fill: 'transparent',
+            stroke: 'none',
+            'stroke-width': 0,
+            r: 12,
+            style: {
+              color: 'rgba(var(--primary), 0.85)',
+              fontWeight: 'normal'
+            },
+            states: {
+              hover: {
+                fill: 'var(--second)'
+              },
+              select: {
+                fill: 'var(--primary-dark)',
+                style: {
+                  color: 'var(--light)'
+                }
+              } // disabled: { ... }
+
+            }
+          },
+          buttons: [{
+            type: 'hour',
+            count: 12,
+            text: '12h'
+          }, {
+            type: 'day',
+            count: 1,
+            text: '1D'
+          }, {
+            type: 'week',
+            count: 1,
+            text: '1W'
+          }, {
+            type: 'year',
+            count: 1,
+            text: '1Y'
+          }, {
+            type: 'year',
+            count: 2,
+            text: '2Y'
+          }, {
+            type: 'year',
+            count: 5,
+            text: '5Y'
+          }, {
+            type: 'year',
+            count: 10,
+            text: '10Y'
+          }]
+        }, _defineProperty(_rangeSelector, "selected", 3), _defineProperty(_rangeSelector, "inputEnabled", false), _rangeSelector),
         chart: {
-          zoomType: 'x'
+          zoomType: 'x',
+          events: {
+            load: function load() {
+              setTimeout(function () {
+                $('.highcharts-button').each(function () {
+                  var transform = $(this).attr('transform');
+                  console.log(transform);
+                  $(this).attr('transform', transform + ' scale(1.65, 1.5)');
+                });
+              }, 100);
+            }
+          }
         },
         title: {
           text: ''
@@ -164,9 +251,9 @@ $(function () {
           area: {
             fillColor: {
               linearGradient: {
-                x1: 0.3,
+                x1: 1,
                 y1: 0.3,
-                x2: 1,
+                x2: 0.1,
                 y2: 1
               },
               stops: [[0.37, '#DCE4FC'], [0.54, 'rgba(220, 228, 252, 0.06)'], [1, 'rgba(220, 228, 252, 0)']] // [[0, Highcharts.getOptions().colors[0]],
@@ -193,5 +280,13 @@ $(function () {
         }]
       });
     });
-  }
+  } // setTimeout( function () {
+  //     let select = $('select').select2({
+  //         dropdownParent: $(this).closest('div')
+  //     });
+  //     $('.highcharts-button-pressed').on('click', function () {
+  //         select.select2('open');
+  //     });
+  // }, 2000);
+
 });
