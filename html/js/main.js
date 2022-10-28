@@ -225,8 +225,8 @@ $(function () {
             load: function load() {
               setTimeout(function () {
                 $('.highcharts-button').each(function () {
-                  var transform = $(this).attr('transform');
-                  console.log(transform);
+                  var transform = $(this).attr('transform'); // console.log(transform);
+
                   $(this).attr('transform', transform + ' scale(1.65, 1.5)');
                 });
               }, 100);
@@ -289,4 +289,59 @@ $(function () {
   //     });
   // }, 2000);
 
+
+  function transitionEndsOnce($dom, callback) {
+    var tick = Date.now();
+    $dom.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function (e) {
+      var diff = Date.now() - tick;
+      tick = Date.now();
+
+      if (diff > 20) {
+        // this number can be changed, but normally all the event trigger are done in the same time
+        return callback && callback(e);
+      }
+    });
+  }
+
+  $('.js-converter-btn').on('click', changeInput);
+  var animStart = false,
+      height = parseFloat($('.js-converter-item').outerHeight(true));
+  $('.js-converter-item').attr('style', '--height: ' + parseFloat(height) + 'px');
+  var animSpeed = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--anim-speed'));
+
+  function changeInput() {
+    if (window.innerWidth < 767) {
+      if (animStart == false) {
+        animStart = true; // console.log(animStart);
+        // console.log('false');
+
+        $('.js-converter-item').css('transform', 'translateY(' + parseFloat(height + 20 * 2 + 38) + 'px)');
+        $('.js-converter-item ~ .js-converter-item').css('transform', 'translateY(-' + parseFloat(height + 20 * 2 + 38) + 'px)'); // btn.addClass('btn-anim');
+      } else if (animStart == true) {
+        // console.log(animStart);
+        // console.log('true');
+        animStart = false;
+        $('.js-converter-item').css('transform', 'translateY(0px)');
+      }
+    } else {
+      $('.js-converter-btn').addClass('anim-btn');
+
+      if (animStart == false) {
+        animStart = true; // console.log(animStart);
+        // console.log('false');
+
+        $('.js-converter-item').css('transform', 'translateY(' + parseFloat(height + 25) + 'px)');
+        $('.js-converter-item ~ .js-converter-item').css('transform', 'translateY(-' + parseFloat(height + 25) + 'px)'); // btn.addClass('btn-anim');
+      } else if (animStart == true) {
+        // console.log(animStart);
+        // console.log('true');
+        animStart = false;
+        $('.js-converter-item').css('transform', 'translateY(0px)');
+      }
+
+      setTimeout(function () {
+        $('.js-converter-btn').removeClass('anim-btn');
+      }, animSpeed * 4);
+    }
+  }
 });

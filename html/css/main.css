@@ -1,16 +1,17 @@
 @charset "UTF-8";
+/* Single property transition mixin */
 :root {
   --primary: #1F2345;
   --primary-dark: #071D72;
   --second: #ECF5FB;
   --light: #fff;
+  --anim-speed: 300ms;
 }
 
 /*images*/
 /*=======================START-MEDIA=====================*/
 /*=======================END-MEDIA=====================*/
 /* media breakpoint mixin */
-/* Single property transition mixin */
 /*--------- font-face ---------*/
 @font-face {
   font-family: "GothamPro";
@@ -325,9 +326,9 @@ body {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -512,6 +513,23 @@ body {
   color: #071D72;
 }
 
+.content .banner {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .content .banner {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 111px;
+    background-color: #000;
+  }
+  .content .banner:first-child {
+    margin-top: -60px;
+  }
+}
+
 .swiper {
   overflow: visible !important;
   margin: 0px !important;
@@ -527,9 +545,9 @@ body {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -708,9 +726,9 @@ h4, .h4-title {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -947,9 +965,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -1095,9 +1113,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
        -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
@@ -1280,9 +1298,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
        -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
@@ -1848,9 +1866,9 @@ table tbody tr {
   -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
        -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
           transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -1952,6 +1970,15 @@ table tbody tr {
   border: 1px solid #071D72;
   position: relative;
   width: 100%;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+       -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
+          transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 @media only screen and (min-width: 767px) {
@@ -2089,9 +2116,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -2203,9 +2230,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -2247,9 +2274,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -2333,8 +2360,20 @@ table tbody tr {
   overflow: hidden;
   margin-top: auto;
   margin-bottom: auto;
+  position: relative;
   width: 38px;
   height: 38px;
+}
+
+.сonverter-сurrency__btn.anim-btn:after {
+  -webkit-animation-name: btn-anim;
+          animation-name: btn-anim;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2354,7 +2393,7 @@ table tbody tr {
   }
 }
 
-.сonverter-сurrency__btn:before {
+.сonverter-сurrency__btn:before, .сonverter-сurrency__btn:after {
   content: '';
   background-color: #ECF5FB;
   display: -webkit-box;
@@ -2372,9 +2411,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
        -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
@@ -2382,6 +2421,11 @@ table tbody tr {
   width: 100%;
   height: 100%;
   border-radius: inherit;
+}
+
+.сonverter-сurrency__btn:after {
+  z-index: 2;
+  background-color: #CEE9FC;
 }
 
 @media (any-hover: hover) {
@@ -2403,15 +2447,9 @@ table tbody tr {
   }
 }
 
-.сonverter-сurrency__btn:active:before {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  background-color: #ECF5FB;
-}
-
 .сonverter-сurrency__btn .icon {
   position: relative;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -2428,9 +2466,9 @@ table tbody tr {
     -webkit-transition-property: all;
     -o-transition-property: all;
     transition-property: all;
-    -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+    -webkit-transition-duration: 300ms;
+         -o-transition-duration: 300ms;
+            transition-duration: 300ms;
     -webkit-transition-timing-function: ease;
          -o-transition-timing-function: ease;
             transition-timing-function: ease;
@@ -2532,9 +2570,9 @@ table tbody tr {
     -webkit-transition-property: all;
     -o-transition-property: all;
     transition-property: all;
-    -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+    -webkit-transition-duration: 300ms;
+         -o-transition-duration: 300ms;
+            transition-duration: 300ms;
     -webkit-transition-timing-function: ease;
          -o-transition-timing-function: ease;
             transition-timing-function: ease;
@@ -2586,6 +2624,28 @@ table tbody tr {
     padding: 15px 30px 15px !important;
     margin-bottom: -15px;
     overflow: auto !important;
+  }
+}
+
+@-webkit-keyframes btn-anim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes btn-anim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -2737,7 +2797,7 @@ table tbody tr {
 }
 
 @media only screen and (max-width: 767px) {
-  .sidebar__banner {
+  .sidebar__banner, .sidebar__small-menu {
     display: none;
   }
 }
@@ -2750,6 +2810,12 @@ table tbody tr {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.sidebar__small-menu .row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .filter {
@@ -2788,9 +2854,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -3282,6 +3348,15 @@ table tbody tr {
   }
 }
 
+.tab-card {
+  padding: 9.8px 32px;
+  max-width: 200px;
+  width: 100%;
+  color: #071D72;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
 .first-section {
   padding-top: 40px;
   position: relative;
@@ -3356,9 +3431,16 @@ table tbody tr {
 }
 
 .first-section__banner {
+  display: none;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .first-section__banner {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -3515,6 +3597,13 @@ table tbody tr {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .first-section__large-banner img {
+    width: 100%;
+    height: 111px;
+  }
+}
+
 @media only screen and (min-width: 1400px) {
   .first-section .сonverter-сurrency, .first-section__large-banner {
     grid-column: 2/3;
@@ -3533,6 +3622,13 @@ table tbody tr {
 @media only screen and (min-width: 1200px) {
   .first-section + .app {
     margin-top: -210px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .first-section__with-banner + .app {
+    padding-top: 455px;
+    margin-top: -373px;
   }
 }
 
@@ -4063,9 +4159,9 @@ table tbody tr {
   -webkit-transition-property: background color;
   -o-transition-property: background color;
   transition-property: background color;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -4087,9 +4183,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -4157,9 +4253,9 @@ table tbody tr {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
